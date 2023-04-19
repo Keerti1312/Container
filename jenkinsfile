@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         dockerImage=''
-        registry='Keerti1312/Container'
+        registry='dockerfile'
         //registryCredential = 'dockerhub_test'
     }
     stages{
