@@ -2,8 +2,8 @@ pipeline {
     agent any
     environment {
         dockerImage=''
-        registry='Keerti1312/Docker-Kubernetes'
-        registryCredential = 'dockerhub_test'
+        registry='Keerti1312/Container'
+        //registryCredential = 'dockerhub_test'
     }
     stages{
         stage("Git pull"){
