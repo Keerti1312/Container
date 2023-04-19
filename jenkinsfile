@@ -11,12 +11,13 @@ pipeline {
             }
         stage('login to dockerhub'){
             steps {
-            sh 'echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin'
+            sh 'echo docker login'
+            }
         }
 
         stage('push image'){
             steps {
-                sh 'docker push newimage/alpine:latest '
+                sh 'docker push newimage/alpine:latest'
             }
         }
     }
@@ -29,4 +30,3 @@ pipeline {
             }
         }
     }
-}
