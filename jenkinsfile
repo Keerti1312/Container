@@ -6,7 +6,7 @@ pipeline {
      stages {
         stage('Build Docker Image') {
             steps { 
-                sh 'docker build -t newimage/alpine:latest .'
+                sh 'docker build -t pyimage:1.0.1 .'
                 }
             }
         stage('login to dockerhub'){
@@ -17,7 +17,7 @@ pipeline {
 
         stage('push image'){
             steps {
-                sh 'docker push newimage/alpine:latest'
+                sh 'docker push pyimage:1.0.1'
             }
         }
     }
