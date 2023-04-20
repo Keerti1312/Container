@@ -17,6 +17,7 @@ pipeline {
 
         stage('push image'){
             steps {
+                sh 'echo docker tag new:2.0 keerti13/new:2.0'
                 sh 'echo docker push demo:2.0'
             }
         }
