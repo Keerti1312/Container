@@ -6,7 +6,7 @@ pipeline {
      stages {
         stage('Build Docker Image') {
             steps { 
-                sh 'docker build -t newimage:2.0 .'
+                sh 'docker build -t demo:2.0 .'
                 }
             }
         stage('login to dockerhub'){
@@ -17,7 +17,7 @@ pipeline {
 
         stage('push image'){
             steps {
-                sh 'echo docker push newimage:2.0'
+                sh 'echo docker push demo:2.0'
             }
         }
     }
