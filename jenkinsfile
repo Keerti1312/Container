@@ -17,7 +17,7 @@ pipeline {
 
         stage('push image'){
             steps {
-                sh 'docker push demo:2.0 keerti13/demo:2.0'
+                sh 'docker push keerti13/demo:2.0'
             }
         }
     }
