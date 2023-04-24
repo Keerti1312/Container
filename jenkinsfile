@@ -11,14 +11,14 @@ pipeline {
             }
         stage('login to dockerhub'){
             steps {
-            sh 'echo docker login -u keerti13 -p Dimple1213'
+            sh 'docker login -u keerti13 -p Dimple1213'
             }
         }
 
         stage('push image'){
             steps {
-                sh 'echo docker tag demo:2.0 keerti13/demo:2.0'
-                sh 'echo docker push demo:2.0'
+                sh 'docker tag demo:2.0 keerti13/demo:2.0'
+                sh 'docker push demo:2.0'
             }
         }
     }
