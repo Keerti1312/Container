@@ -11,7 +11,7 @@ pipeline {
             }
         stage('login to dockerhub'){
             steps {
-            sh 'echo docker login'
+            sh 'echo docker login -u keerti13 -p Dimple1213'
             }
         }
 
